@@ -2,14 +2,14 @@ package empresa;
 
 public class Empregado {
 
-	public String nome;
-	public String sobrenome;
-	public double salario;
+	private String nome;
+	private String sobrenome;
+	private double salario;
 
-	public Empregado() {
-		nome = "";
-		sobrenome = "";
-		salario = 0;
+	public Empregado(String nome, String sobrenome, double salario) {
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.salario = salario;
 	}
 
 	public void setNome(String nome) {
@@ -41,5 +41,10 @@ public class Empregado {
 	}
 	public double retornarAumento() {
 		return salario + aumentarSalario();
+	}
+	public void mostrarEmpregado() {
+		System.out.println("O empregado " + getNome() + " " + getSobrenome() +
+		" recebe " + getSalario() + ". Com o aumento, receberá " +
+		retornarAumento());
 	}
 }
