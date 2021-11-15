@@ -39,4 +39,7 @@ public class Empregado {
 	public double aumentarSalario() {
 		return salario * 0.1;
 	}
+	public double retornarAumento() {
+		return salario + aumentarSalario();
+	}
 }
