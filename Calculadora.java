@@ -180,6 +180,16 @@ public class Calculadora {
 		btn1.setBounds(232, 127, 117, 25);
 		frame.getContentPane().add(btn1);
 		
+		JButton btn0 = new JButton("0");
+		btn0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (e.getSource() == btn3)
+		            txtVisor.append("3");
+			}
+		});
+		btn0.setBounds(115, 158, 117, 25);
+		frame.getContentPane().add(btn0);
+		
 		JButton btnIgual = new JButton("=");
 		btnIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -211,15 +221,6 @@ public class Calculadora {
 		});
 		btnIgual.setBounds(0, 158, 117, 25);
 		frame.getContentPane().add(btnIgual);
-		
-		JButton btn0 = new JButton("0");
-		btn0.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		btn0.setBounds(115, 158, 117, 25);
-		frame.getContentPane().add(btn0);
 	}
 
 	/**
